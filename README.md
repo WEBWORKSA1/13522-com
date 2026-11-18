@@ -10,7 +10,7 @@
 See `RESEARCH.md` for the concept research and `BUILD-PROMPTS.md` for the phase-wise build prompts.
 
 ## Go-live checklist
-1. Settings → Pages: Source = **GitHub Actions** (the workflow attempts to enable this automatically).
+1. Settings → Pages: Source — or GitHub Actions is NOT needed; choose **Deploy from a branch → main → / (root)**.
 2. Custom domain: add DNS (A records 185.199.108–111.153 + `www` CNAME to `webworksa1.github.io`), then add `13522.com` under Settings → Pages and tick Enforce HTTPS.
 3. Submit one test form and confirm the one-time FormSubmit activation email.
 4. Submit `https://13522.com/sitemap.xml` to Google Search Console, then apply in AdSense.

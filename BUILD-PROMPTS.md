@@ -35,7 +35,7 @@ Reusable prompts to rebuild or extend this site. Each phase is self-contained; r
 > Privacy policy (forms, local storage, Google AdSense cookie wording, opt-out links, EEA consent, user rights), terms, cookie policy table, disclaimer (calculators, affiliate/sponsored, wellbeing), and a trademark & copyright disclosure stating no rights are claimed in the number 13522, no affiliation with others using it, the 1-3-5 rule is a generic method, third-party marks are nominative use.
 
 ## Phase 11 — Automation & deploy
-> Add `.github/workflows/deploy.yml`: on push to main, daily cron and manual dispatch → (on schedule) run `_src/refresh.py` to rotate `data/daily.json` (tip + challenge of the day) and stamp sitemap lastmod, commit, then configure-pages (enablement: true), upload-pages-artifact and deploy-pages.
+> Add `.github/workflows/refresh.yml`: daily cron + manual dispatch runs `_src/refresh.py` to rotate `data/daily.json` (tip + challenge of the day) and stamp sitemap lastmod, then commits to main; GitHub Pages serves main / (root) and rebuilds on each commit.
 
 ## Phase 12 — QA & launch
 > Render every page at 1366 px and 390 px in a headless browser; check no JS errors; run the planner, Smart Sort, assessment funnel and a form submission with the network call intercepted; grep the repo to confirm the email address never appears; validate sitemap and internal links. Then point 13522.com DNS at GitHub Pages, add a `CNAME` file, enable HTTPS, submit the sitemap to Search Console and apply to AdSense.
